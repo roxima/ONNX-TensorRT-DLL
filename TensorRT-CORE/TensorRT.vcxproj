@@ -22,33 +22,33 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{203C7282-304B-4AAB-8E92-B323BCE32FE6}</ProjectGuid>
     <RootNamespace>TensorRT</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>TensorRT-CORE</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <CLRSupport>true</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <CLRSupport>true</CLRSupport>
   </PropertyGroup>
@@ -109,10 +109,11 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\3rd\TensorRT-7.0.0.11\include;..\3rd\TensorRT-7.0.0.11\samples\common;..\3rd\TensorRT-7.0.0.11\samples\common\windows;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\TensorRT-7.0.0.11\include;C:\TensorRT-7.0.0.11\samples\common;C:\TensorRT-7.0.0.11\samples\common\windows;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);..\3rd\TensorRT-7.0.0.11\lib\*.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64\*.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);C:\TensorRT-7.0.0.11\lib\*.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64\*.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -122,16 +123,16 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\3rd\TensorRT-7.0.0.11\include;..\3rd\TensorRT-7.0.0.11\samples\common;..\3rd\TensorRT-7.0.0.11\samples\common\windows;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\TensorRT-7.0.0.11\include;C:\TensorRT-7.0.0.11\samples\common;C:\TensorRT-7.0.0.11\samples\common\windows;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include</AdditionalIncludeDirectories>
       <DebugInformationFormat>None</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);..\3rd\TensorRT-7.0.0.11\lib\*.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64\*.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);C:\TensorRT-7.0.0.11\lib\*.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64\*.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\3rd\TensorRT-7.0.0.11\samples\common\logger.cpp" />
     <ClCompile Include="dll.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\3rd\TensorRT-7.0.0.11\samples\common\logger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="dll.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -1,0 +1,28 @@
+﻿  dll.cpp
+C:\Users\dkaka\Desktop\ONNX-TensorRT-DLL\TensorRT-CORE\dll.cpp(122,40): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
+C:\Users\dkaka\Desktop\ONNX-TensorRT-DLL\TensorRT-CORE\dll.cpp(122,22): warning C4244: 'initializing': conversion from 'std::streamoff' to 'const int', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.25.28610\include\numeric(35,26): warning C4244: '=': conversion from '_Ty' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int64_t
+          ]
+          and
+          [
+              _Ty=int
+          ]
+C:\TensorRT-7.0.0.11\samples\common\common.h(617): message : see reference to function template instantiation '_Ty std::accumulate<const int*,int,std::multiplies<int64_t>>(const _InIt,const _InIt,_Ty,_Fn)' being compiled
+          with
+          [
+              _Ty=int,
+              _InIt=const int *,
+              _Fn=std::multiplies<int64_t>
+          ]
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+  Generating Code...
+  dll.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+     Creating library ..\bin\x64\Debug\TensorRT-CORE.lib and object ..\bin\x64\Debug\TensorRT-CORE.exp
+dll.obj : warning LNK4248: unresolved typeref token (01000016) for 'CUstream_st'; image may not run
+dll.obj : warning LNK4248: unresolved typeref token (0100001E) for 'CUevent_st'; image may not run
+dll.obj : error LNK2020: unresolved token (0A00097C) "class Logger gLogger" (?gLogger@@3VLogger@@A)
+dll.obj : error LNK2001: unresolved external symbol "class Logger gLogger" (?gLogger@@3VLogger@@A)
+..\bin\x64\Debug\TensorRT-CORE.dll : fatal error LNK1120: 2 unresolved externals

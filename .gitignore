@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/TensorRT/v16
+/bin/x64
+/packages/OpenCvSharp3-AnyCPU.4.0.0.20181129
+/TensorRT-DEMO/obj
